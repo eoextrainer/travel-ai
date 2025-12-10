@@ -1,5 +1,5 @@
 import os
-from connectors import ConnectorResult, _safe_get, HEADERS_JSON
+from src.connectors import ConnectorResult, _safe_get, HEADERS_JSON
 
 # Additional providers: TripAdvisor, Rail Europe, Uber, HERE, OpenStreetMap Overpass
 

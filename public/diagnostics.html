@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>API Diagnostics • Travel AI</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .status-grid { display:grid; grid-template-columns: repeat(2, 1fr); gap:16px; }
+    .status-card { background:#fff; border:1px solid #e5e7eb; border-radius:10px; padding:12px; }
+    .ok { color:#065f46; }
+    .fail { color:#b91c1c; }
+    .small { color:#6b7280; font-size:.85rem; }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="overlay"></div>
+    <h1>API Diagnostics</h1>
+    <p>Live status of provider test endpoints</p>
+  </header>
+  <main class="container">
+    <section class="card">
+      <h2>Provider Status</h2>
+      <div id="grid" class="status-grid"></div>
+    </section>
+    <section class="card">
+      <a class="pill" href="/">← Back to Planner</a>
+    </section>
+  </main>
+  <footer>
+    <p>© 2025 Travel AI Planner</p>
+  </footer>
+<script>
+const endpoints = [
+  { name: 'amadeus', url: '/api/test/amadeus' },
+  { name: 'skyscanner', url: '/api/test/skyscanner' },
+  { name: 'yelp', url: '/api/test/yelp' },
+  { name: 'google_places', url: '/api/test/google_places' },
+  { name: 'tripadvisor', url: '/api/test/tripadvisor' },
+  { name: 'rail_europe', url: '/api/test/rail_europe' },
+  { name: 'uber', url: '/api/test/uber' },
+  { name: 'here', url: '/api/test/here' },
+  { name: 'overpass', url: '/api/test/overpass' },
+  { name: 'deutsche_bahn', url: '/api/test/deutsche_bahn' },
+  { name: 'foursquare', url: '/api/test/foursquare' },
+  { name: 'opentable', url: '/api/test/opentable' },
+];
+async function run() {
+  const grid = document.getElementById('grid');
+  for (const ep of endpoints) {
+    const card = document.createElement('div');
+    card.className = 'status-card';
+    card.innerHTML = `<strong>${ep.name}</strong><div class="small">${ep.url}</div><div class="small">loading...</div>`;
+    grid.appendChild(card);
+    try {
+      const res = await fetch(ep.url);
+      const json = await res.json();
+      const status = json.ok ? 'ok' : 'fail';
+      card.innerHTML = `<strong>${ep.name}</strong><div class="small">${ep.url}</div><div class="${status}">${status.toUpperCase()} • code ${json.status_code}</div><div class="small">${json.message || ''}</div>`;
+    } catch (e) {
+      card.innerHTML = `<strong>${ep.name}</strong><div class="small">${ep.url}</div><div class="fail">ERROR</div><div class="small">${String(e).slice(0,200)}</div>`;
+    }
+  }
+}
+run();
+</script>
+</body>
+</html>

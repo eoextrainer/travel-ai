@@ -28,3 +28,42 @@ format:
 
 output:
     make the output easy to copy into a google document and create a portable markdown version
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Open provider portals (perform signup and key generation):
+Amadeus: https://developers.amadeus.com
+Skyscanner (via RapidAPI or partner): https://rapidapi.com/ or https://partners.skyscanner.net
+Yelp Fusion: https://www.yelp.com/developers
+Google Places: https://console.cloud.google.com/apis/library/places-backend.googleapis.com
+Set the keys in .env and re-run docker compose up -d (restart web service).
+
+
+API Key Requests
+
+Opening provider sites (manual action required):
+Amadeus: https://developers.amadeus.com
+Skyscanner (RapidAPI or partner): https://rapidapi.com / https://partners.skyscanner.net
+Yelp: https://www.yelp.com/developers
+Google Places: https://console.cloud.google.com/apis/library/places-backend.googleapis.com
+HERE: https://developer.here.com
+TripAdvisor, Rail Europe, Uber: partner programs; keys via business onboarding.

@@ -3,8 +3,9 @@ from flask_cors import CORS
 import os
 import json
 import mysql.connector
-from connectors import test_amadeus, test_skyscanner, test_yelp, test_google_places
-from connectors_extra import test_tripadvisor, test_rail_europe, test_uber, test_here, test_overpass
+from src.connectors import test_amadeus, test_skyscanner, test_yelp, test_google_places
+from src.connectors_extra import test_tripadvisor, test_rail_europe, test_uber, test_here, test_overpass
+from src.connectors_more import test_deutsche_bahn, test_foursquare, test_opentable
 
 app = Flask(__name__, static_folder="../public", static_url_path="")
 CORS(app)
@@ -112,3 +113,15 @@ def api_test_here():
 @app.get('/api/test/overpass')
 def api_test_overpass():
     return jsonify(test_overpass().to_dict())
+
+@app.get('/api/test/deutsche_bahn')
+def api_test_db():
+    return jsonify(test_deutsche_bahn().to_dict())
+
+@app.get('/api/test/foursquare')
+def api_test_foursquare():
+    return jsonify(test_foursquare().to_dict())
+
+@app.get('/api/test/opentable')
+def api_test_opentable():
+    return jsonify(test_opentable().to_dict())
