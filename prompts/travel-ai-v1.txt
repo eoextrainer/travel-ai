@@ -1,0 +1,30 @@
+persona: you are a business entrepreneur and a seaoned software engineer with more than 10 years of experience.
+
+context: you must create a detailed, structured and comprehensive artificial intelligence prompt to create the following:
+    the complete step by step curriculum for a 2 hour workshop on how to build an ai agent for non-technical persons who have limited knowledge of computers
+    the complete traval ai agent project implementation document
+    the complete project setup, configuration, version control (using git and the [git@github.com:eoextrainer/travel-ai.git] github repo) workflow for each change
+
+criteria:
+    the ai agent built during the course will simlute the complete workflow of a professional travel agency and must include user options for:
+        initial travel destinations: in europe, asia, africa and the americas
+        a choice of initial travel transportation from their home: bus, train, airplane (5 choices each per destination )
+        a choice of initial accomodation (5 choices each per destination)
+        a choice of food restuation options onsite (5 choices each per destination)
+        a choice of touristic and cultural sites to visit (5 choices each per destination)
+        a choice of on site transporation (taxi, uber, private chauffeur, public transporation) (5 choices each per destination)
+    the complete step by step curriculum must be readable, undestandable and actionable by non-technical persons
+    the course must be complete within the scope of a 2 hour workshop
+    all of the technical tools, frameworks and dependencies must be included and documented inside a separate technical document BUT must not be needed to be presented to the course delegates
+
+constraints:
+    you must keep the language of the complete step by step curriculum to a human and easy to understand level
+
+optimisation:
+    this prompte must be optimised for microsoft copilot and the following LLMsS [ChatGPT, Claude, Gemini]
+
+format:
+    write everything in english
+
+output:
+    make the output easy to copy into a google document and create a portable markdown version
