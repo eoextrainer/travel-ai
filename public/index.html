@@ -7,13 +7,21 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="hero">
+  <header class="hero hero-video">
+    <div class="video-bg">
+      <iframe class="video-iframe" src="https://www.youtube.com/embed/xA69zZ_h7no?autoplay=1&mute=1&loop=1&playlist=xA69zZ_h7no&controls=0&showinfo=0&modestbranding=1" title="Hero Video" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
     <div class="overlay"></div>
-    <h1>Travel AI Planner</h1>
-    <p>Design your journey with an intelligent travel agent.</p>
+    <div class="hero-content">
+      <h1 class="brand">Travel AI Concierge</h1>
+      <p>Curated journeys, crafted intelligently.</p>
+      <div class="hero-actions">
+        <a class="btn-outline" href="/diagnostics.html">API Diagnostics</a>
+      </div>
+    </div>
   </header>
   <main class="container">
-    <section class="card">
+    <section class="card premium">
       <h2>Choose a Region</h2>
       <div class="grid">
         <button class="pill" data-region="Europe">Europe</button>
@@ -23,7 +31,7 @@
       </div>
     </section>
 
-    <section id="options" class="card hidden">
+    <section id="options" class="card premium hidden">
       <h2 id="regionTitle"></h2>
       <div class="columns">
         <div>
@@ -53,14 +61,32 @@
       <div id="status" class="status"></div>
     </section>
 
+    <section class="card premium">
+      <h2>Inspiration • Premium Video Carousel</h2>
+      <div class="carousel">
+        <div class="carousel-track">
+          <iframe class="slide" src="https://www.youtube.com/embed/Q7tTV5Ki5KU?enablejsapi=1&mute=1" title="Video 1" frameborder="0" allow="autoplay; encrypted-media"></iframe>
+          <iframe class="slide" src="https://www.youtube.com/embed/t6298ePEwcI?enablejsapi=1&mute=1" title="Video 2" frameborder="0" allow="autoplay; encrypted-media"></iframe>
+          <iframe class="slide" src="https://www.youtube.com/embed/RILhmAABm9E?enablejsapi=1&mute=1" title="Video 3" frameborder="0" allow="autoplay; encrypted-media"></iframe>
+          <iframe class="slide" src="https://www.youtube.com/embed/c0JtGsxr3nw?enablejsapi=1&mute=1" title="Video 4" frameborder="0" allow="autoplay; encrypted-media"></iframe>
+          <iframe class="slide" src="https://www.youtube.com/embed/8G1Rwb_UB2w?enablejsapi=1&mute=1" title="Video 5" frameborder="0" allow="autoplay; encrypted-media"></iframe>
+        </div>
+        <div class="carousel-nav">
+          <button class="nav prev">‹</button>
+          <button class="nav next">›</button>
+        </div>
+      </div>
+    </section>
+
     <section class="card">
       <h2>Recent Plans</h2>
       <ul id="recent"></ul>
     </section>
   </main>
-  <footer>
-    <p>© 2025 Travel AI Planner</p>
+  <footer class="premium-footer">
+    <p>© 2025 Travel AI Concierge</p>
   </footer>
   <script src="app.js"></script>
+  <script src="carousel.js"></script>
 </body>
 </html>
