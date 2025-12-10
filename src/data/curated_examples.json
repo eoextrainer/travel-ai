@@ -1,0 +1,126 @@
+{
+  "Europe": {
+    "transport_from_home": {
+      "bus": ["FlixBus to Paris", "Eurolines to Berlin", "National Express to London", "ALSA to Madrid", "RegioJet to Prague"],
+      "train": ["Eurostar to London", "TGV to Paris", "ICE to Berlin", "AVE to Madrid", "Railjet to Vienna"],
+      "airplane": ["LHR → CDG", "JFK → AMS", "ORD → FRA", "DXB → FCO", "SIN → BCN"]
+    },
+    "accommodation": [
+      "Budget: City Hostel Paris",
+      "Mid-range: Hotel Berlin Mitte",
+      "Boutique: Lisbon Riverside Inn",
+      "Upscale: Barcelona Grand",
+      "Luxury: Vienna Palace Hotel"
+    ],
+    "food": [
+      "Bistro Paul (Paris)",
+      "Tapas La Rambla (Barcelona)",
+      "Trattoria Roma (Rome)",
+      "Wursthaus (Berlin)",
+      "Seafood Algarve (Portugal)"
+    ],
+    "sites": [
+      "Eiffel Tower (Paris)",
+      "Sagrada Família (Barcelona)",
+      "Colosseum (Rome)",
+      "Brandenburg Gate (Berlin)",
+      "Prague Castle (Prague)"
+    ],
+    "on_site_transport": [
+      "Taxi (Paris)", "Uber (Barcelona)", "Private Chauffeur (Rome)", "Metro (Berlin)", "Tram (Vienna)"
+    ]
+  },
+  "Asia": {
+    "transport_from_home": {
+      "bus": ["Airport Shuttle to City", "Intercity Coach to Hub", "Express Bus to Terminal", "Regional Bus to Station", "Sleeper Bus to Hub"],
+      "train": ["Shinkansen to Tokyo", "KTX to Seoul", "HSR to Taipei", "Express to Bangkok", "Express to Kuala Lumpur"],
+      "airplane": ["LAX → NRT", "LHR → HND", "SYD → SIN", "DXB → DEL", "JFK → ICN"]
+    },
+    "accommodation": [
+      "Budget: Capsule Hotel Tokyo",
+      "Mid-range: Seoul City Stay",
+      "Boutique: Taipei Garden House",
+      "Upscale: Bangkok Riverside",
+      "Luxury: Marina Bay Sands"
+    ],
+    "food": [
+      "Sushi Ginza (Tokyo)",
+      "KBBQ Gangnam (Seoul)",
+      "Night Market Bites (Taipei)",
+      "Pad Thai Street (Bangkok)",
+      "Hawker Centre Classics (Singapore)"
+    ],
+    "sites": [
+      "Meiji Shrine (Tokyo)",
+      "Gyeongbokgung Palace (Seoul)",
+      "Taipei 101 (Taipei)",
+      "Grand Palace (Bangkok)",
+      "Gardens by the Bay (Singapore)"
+    ],
+    "on_site_transport": [
+      "Taxi (Tokyo)", "Uber (Seoul)", "Private Chauffeur (Taipei)", "BTS/MRT (Bangkok)", "MRT (Singapore)"
+    ]
+  },
+  "Africa": {
+    "transport_from_home": {
+      "bus": ["Intercape to Cape Town", "Luxor Coach to Cairo", "Translux to Johannesburg", "Supratours to Marrakesh", "CTM to Casablanca"],
+      "train": ["Gautrain to Johannesburg", "ONCF to Rabat", "EgyptRail to Giza", "SNCFT to Tunis", "TAZARA to Dar es Salaam"],
+      "airplane": ["JFK → CPT", "LHR → CMN", "DXB → NBO", "CDG → DKR", "FRA → CAI"]
+    },
+    "accommodation": [
+      "Budget: Cape Town Backpackers",
+      "Mid-range: Nairobi City Lodge",
+      "Boutique: Marrakesh Riad",
+      "Upscale: Casablanca Corniche Hotel",
+      "Luxury: Cairo Nile View Resort"
+    ],
+    "food": [
+      "Braai House (Cape Town)",
+      "Nyama Choma Grill (Nairobi)",
+      "Tagine Medina (Marrakesh)",
+      "Seafood Corniche (Casablanca)",
+      "Koshari Corner (Cairo)"
+    ],
+    "sites": [
+      "Table Mountain (Cape Town)",
+      "Maasai Market (Nairobi)",
+      "Jemaa el-Fnaa (Marrakesh)",
+      "Hassan II Mosque (Casablanca)",
+      "Giza Pyramids (Cairo)"
+    ],
+    "on_site_transport": [
+      "Taxi (Cape Town)", "Uber (Nairobi)", "Private Chauffeur (Marrakesh)", "Tram (Casablanca)", "Metro (Cairo)"
+    ]
+  },
+  "Americas": {
+    "transport_from_home": {
+      "bus": ["Greyhound to NYC", "Megabus to Chicago", "Coach Canada to Toronto", "TurBus to Santiago", "ADO to Mexico City"],
+      "train": ["Amtrak to Washington DC", "VIA Rail to Montreal", "Metra to Chicago", "Tren a las Nubes (Salta)", "Metrotren to Valparaíso"],
+      "airplane": ["SFO → JFK", "MIA → MEX", "LAX → YYZ", "DFW → SCL", "EZE → LIM"]
+    },
+    "accommodation": [
+      "Budget: NYC Pod Hotel",
+      "Mid-range: Chicago Riverfront",
+      "Boutique: Mexico City Roma Stay",
+      "Upscale: Toronto Harbour Hotel",
+      "Luxury: Santiago Andes View"
+    ],
+    "food": [
+      "Pizza Slice (NYC)",
+      "Deep Dish Hub (Chicago)",
+      "Tacos Coyoacán (Mexico City)",
+      "Poutine Corner (Toronto)",
+      "Empanada Plaza (Santiago)"
+    ],
+    "sites": [
+      "Statue of Liberty (NYC)",
+      "Millennium Park (Chicago)",
+      "Zócalo (Mexico City)",
+      "CN Tower (Toronto)",
+      "Cerro San Cristóbal (Santiago)"
+    ],
+    "on_site_transport": [
+      "Taxi (NYC)", "Uber (Chicago)", "Private Chauffeur (Mexico City)", "Subway (Toronto)", "Metro (Santiago)"
+    ]
+  }
+}

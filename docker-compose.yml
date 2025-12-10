@@ -1,0 +1,38 @@
+version: "3.9"
+services:
+  web:
+    build: .
+    container_name: travel_ai_web
+    ports:
+      - "4000:4000"
+    environment:
+      DB_HOST: db
+      DB_USER: travel
+      DB_PASSWORD: travelpwd
+      DB_NAME: travel_ai
+      AMADEUS_API_KEY: ${AMADEUS_API_KEY}
+      AMADEUS_API_SECRET: ${AMADEUS_API_SECRET}
+      SKYSCANNER_API_KEY: ${SKYSCANNER_API_KEY}
+      YELP_API_KEY: ${YELP_API_KEY}
+      GOOGLE_PLACES_API_KEY: ${GOOGLE_PLACES_API_KEY}
+      TRIPADVISOR_API_KEY: ${TRIPADVISOR_API_KEY}
+      RAIL_EUROPE_API_KEY: ${RAIL_EUROPE_API_KEY}
+      UBER_SERVER_TOKEN: ${UBER_SERVER_TOKEN}
+      HERE_API_KEY: ${HERE_API_KEY}
+    depends_on:
+      - db
+  db:
+    image: mysql:8.0
+    container_name: travel_ai_db
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpwd
+      MYSQL_DATABASE: travel_ai
+      MYSQL_USER: travel
+      MYSQL_PASSWORD: travelpwd
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./src/db_init.sql:/docker-entrypoint-initdb.d/db_init.sql:ro
+    ports:
+      - "3306:3306"
+volumes:
+  db_data:

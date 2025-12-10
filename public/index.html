@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Travel AI Planner</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="overlay"></div>
+    <h1>Travel AI Planner</h1>
+    <p>Design your journey with an intelligent travel agent.</p>
+  </header>
+  <main class="container">
+    <section class="card">
+      <h2>Choose a Region</h2>
+      <div class="grid">
+        <button class="pill" data-region="Europe">Europe</button>
+        <button class="pill" data-region="Asia">Asia</button>
+        <button class="pill" data-region="Africa">Africa</button>
+        <button class="pill" data-region="Americas">Americas</button>
+      </div>
+    </section>
+
+    <section id="options" class="card hidden">
+      <h2 id="regionTitle"></h2>
+      <div class="columns">
+        <div>
+          <h3>From-Home Transport</h3>
+          <ul id="transport"></ul>
+        </div>
+        <div>
+          <h3>Accommodation</h3>
+          <ul id="accommodation"></ul>
+        </div>
+      </div>
+      <div class="columns">
+        <div>
+          <h3>Food</h3>
+          <ul id="food"></ul>
+        </div>
+        <div>
+          <h3>Sites to Visit</h3>
+          <ul id="sites"></ul>
+        </div>
+      </div>
+      <div>
+        <h3>On-Site Transport</h3>
+        <ul id="onsite"></ul>
+      </div>
+      <button id="save" class="primary">Save Selections</button>
+      <div id="status" class="status"></div>
+    </section>
+
+    <section class="card">
+      <h2>Recent Plans</h2>
+      <ul id="recent"></ul>
+    </section>
+  </main>
+  <footer>
+    <p>© 2025 Travel AI Planner</p>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>
